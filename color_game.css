@@ -20,7 +20,6 @@ h1 {
     text-align: center;
 }
 
-#message {
-    color: white;
-    text-align: center;
+#menu {
+    background-color: white;
 }

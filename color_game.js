@@ -73,3 +73,25 @@ function make_random_color(){
     return rgb;
 
 }
+//add an event listener to the buttons 
+var newcolor_button = document.querySelector("#newcolor").addEventListener("click", function(){
+    //if they press it you should reset the colors and the picked color
+    //so call the reset board function
+    reset_board();
+})
+//function reset the board will reset the game and all of its colors
+function reset_board(){
+    //return h1 back to default color
+    h1.style.backgroundColor = "black";
+    //generate new colors and use a for loop to update the new colors again
+    colors = generate_random_colors(6);
+    for(var i = 0; i < squares.length; i++){
+        //add colors to squares
+        squares[i].style.backgroundColor = colors[i];
+    }
+    //pick a new winning color and update h1
+    picked_color = randomColor();
+    color_display.textContent = picked_color;
+
+
+}
